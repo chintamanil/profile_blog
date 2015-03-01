@@ -8,6 +8,7 @@ appControllers.controller('PostViewCtrl', ['$scope', '$routeParams', '$location'
 
         PostService.read(id).success(function(data) {
             data.content = $sce.trustAsHtml(data.content);
+            console.log(data);
             $scope.post = data;
         }).error(function(data, status) {
             console.log(status);

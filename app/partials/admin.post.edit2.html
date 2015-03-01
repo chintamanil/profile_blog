@@ -1,5 +1,4 @@
 <general-navigation></general-navigation>
-
 <section class="post">
     <ol class="breadcrumb">
         <li><a href="#/">Blog</a></li>
@@ -16,18 +15,12 @@
             <label for="textareaContent">Content</label>
             <textarea class="form-control" rows="19" id="textareaContent" ng-model="post.content"></textarea>
         </div>
-
-
         <div class="form-group">
             <label for="inputTags">Tags</label>
             <input type="text" class="form-control" id="inputTags" placeholder="Tags #1, Tags #2, ..." value="{{post.tags}}" ng-model="post.tags">
         </div>
         <button type="submit" class="btn btn-success" ng-click="save(post, false)">Save</button>
     </form>
-<!--<div ng-controller="MyController">-->
-<!--<h1>Markdown Render Example</h1>-->
-  	    <!--<textarea ng-model="liveedit" markdownedit markdown-hidden-buttons="cmdCode,cmdQuote" class="form-control" rows="19" ></textarea>-->
-        <!--<markdown bind-from='liveedit'></markdown>-->
-    <!--</div>-->
+
 </section>
 <general-footer></general-footer>

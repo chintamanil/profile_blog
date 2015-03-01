@@ -9,9 +9,17 @@ app.config(['$locationProvider', '$routeProvider',
             templateUrl: 'partials/post.list.html',
             controller: 'PostListCtrl'
         }).
+        when('/photos', {
+            templateUrl: 'partials/photos.html'
+            //controller: 'PhotosCtrl'
+        }).
         when('/post/:id', {
             templateUrl: 'partials/post.view.html',
             controller: 'PostViewCtrl'
+        }).
+        when('/portfolio', {
+            templateUrl: 'partials/portfolio.html'
+            //controller: 'PortfolioCtrl'
         }).
         when('/tag/:tagName', {
             templateUrl: 'partials/post.list.html',

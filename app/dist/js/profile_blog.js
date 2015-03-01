@@ -1,10 +1,11 @@
 'use strict';
 
-var app = angular.module('app', ['ngRoute', 'appControllers', 'appServices', 'appDirectives']);
+var app = angular.module('app', ['ngRoute', 'appControllers', 'appServices', 'appDirectives', 'codemwnci.markdown-edit-preview']);
 
 var appServices = angular.module('appServices', []);
 var appControllers = angular.module('appControllers', []);
 var appDirectives = angular.module('appDirectives', []);
+var markdowneditpreview = angular.module('codemwnci.markdown-edit-preview', []);
 
 var options = {};
 options.api = {};
@@ -36,9 +37,17 @@ app.config(['$locationProvider', '$routeProvider',
             templateUrl: 'partials/post.list.html',
             controller: 'PostListCtrl'
         }).
+        when('/photos', {
+            templateUrl: 'partials/photos.html'
+            //controller: 'PhotosCtrl'
+        }).
         when('/post/:id', {
             templateUrl: 'partials/post.view.html',
             controller: 'PostViewCtrl'
+        }).
+        when('/portfolio', {
+            templateUrl: 'partials/portfolio.html'
+            //controller: 'PortfolioCtrl'
         }).
         when('/tag/:tagName', {
             templateUrl: 'partials/post.list.html',
@@ -157,13 +166,16 @@ appControllers.controller('AdminPostCreateCtrl', ['$scope', '$location', 'PostSe
 ]);
 
 
-appControllers.controller('AdminPostEditCtrl', ['$scope', '$routeParams', '$location', '$sce', 'PostService',
+ angular.module('app').controller('AdminPostEditCtrl', ['$scope', '$routeParams', '$location', '$sce', 'PostService',
     function AdminPostEditCtrl($scope, $routeParams, $location, $sce, PostService) {
         $scope.post = {};
         var id = $routeParams.id;
-
+        $scope.textarea = '**Welcome, I am some Bold Markdown text**';
+        $scope.liveedit = '**Welcome, I am some Bold Markdown text**';
         PostService.read(id).success(function(data) {
             $scope.post = data;
+            $scope.textarea = '**Welcome, I am some Bold Markdown text**';
+    		$scope.liveedit = data;
             $('#textareaContent').wysihtml5({"font-styles": false});
             $('#textareaContent').val($sce.trustAsHtml(data.content));
         }).error(function(status, data) {
@@ -262,6 +274,17 @@ appControllers.controller('AdminUserCtrl', ['$scope', '$location', '$window', 'U
 
 
 
+appControllers.controller('PhotosCtrl', ['$scope', '$sce', 'PostService',
+    function PhotoCtrl($scope, $sce, PostService) {
+
+    }
+]);
+
+appControllers.controller('PortfolioCtrl', ['$scope', '$sce', 'PostService',
+    function PortfolioCtrl($scope, $sce, PostService) {
+    }
+]);
+
 appControllers.controller('PostListCtrl', ['$scope', '$sce', 'PostService',
     function PostListCtrl($scope, $sce, PostService) {
 
@@ -290,6 +313,7 @@ appControllers.controller('PostViewCtrl', ['$scope', '$routeParams', '$location'
 
         PostService.read(id).success(function(data) {
             data.content = $sce.trustAsHtml(data.content);
+            console.log(data);
             $scope.post = data;
         }).error(function(data, status) {
             console.log(status);

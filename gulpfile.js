@@ -12,14 +12,14 @@ var paths = {
 gulp.task('scripts', function() {
     // concat and copy all JavaScript
     return gulp.src(paths.scripts)
-        .pipe(watch(paths.scripts))
+        //.pipe(watch(paths.scripts))
         .pipe(concat('profile_blog.js'))
         .pipe(gulp.dest('app/dist/js'));
 });
 
 gulp.task('styles', function() {
 	return gulp.src(paths.styles)
-        .pipe(watchLess(paths.styles))
+        //.pipe(watchLess(paths.styles))
         .pipe(less())
 		.pipe(gulp.dest('app/dist/css'));
 });
