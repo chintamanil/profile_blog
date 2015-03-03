@@ -68,9 +68,6 @@ li > a {
 .navbar-collapse {
   border: 2px solid #e0e0e0 ;
 }
-.navbar {
-  border: 2px solid #dbdbdb;
-}
 .navbar-nav,
 .navbar-collapse {
   width: 100%;
@@ -100,6 +97,17 @@ li > a {
 .navbar-default,
 .navbar {
   background-color: #F2F2F2;
-  border: 1px solid rgba(219, 219, 219, 0);
-  border-color: transparent;
+}
+code,
+pre {
+  white-space: pre-wrap;
+  /* CSS 3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
 }

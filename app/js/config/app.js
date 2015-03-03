@@ -5,7 +5,7 @@ var app = angular.module('app', ['ngRoute', 'appControllers', 'appServices', 'ap
 var appServices = angular.module('appServices', []);
 var appControllers = angular.module('appControllers', []);
 var appDirectives = angular.module('appDirectives', []);
-var markdowneditpreview = angular.module('codemwnci.markdown-edit-preview', []);
+//var markdowneditpreview = angular.module('codemwnci.markdown-edit-preview', []);
 
 var options = {};
 options.api = {};

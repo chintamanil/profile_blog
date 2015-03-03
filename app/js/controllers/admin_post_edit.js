@@ -1,16 +1,16 @@
 
- angular.module('app').controller('AdminPostEditCtrl', ['$scope', '$routeParams', '$location', '$sce', 'PostService',
+ app.controller('AdminPostEditCtrl', ['$scope', '$routeParams', '$location', '$sce', 'PostService',
     function AdminPostEditCtrl($scope, $routeParams, $location, $sce, PostService) {
         $scope.post = {};
         var id = $routeParams.id;
-        $scope.textarea = '**Welcome, I am some Bold Markdown text**';
-        $scope.liveedit = '**Welcome, I am some Bold Markdown text**';
+        //$scope.liveedit = '#Welcome, I am some Bold Markdown text';
         PostService.read(id).success(function(data) {
             $scope.post = data;
-            $scope.textarea = '**Welcome, I am some Bold Markdown text**';
-    		$scope.liveedit = data;
+    		//$scope.liveedit = '<div>#Asd</div>';
             $('#textareaContent').wysihtml5({"font-styles": false});
             $('#textareaContent').val($sce.trustAsHtml(data.content));
+            //$('#textareaContent2').wysihtml5({"font-styles": false});
+            //$('#textareaContent2').val($sce.trustAsHtml(data.content));
         }).error(function(status, data) {
             $location.path("/admin");
         });
