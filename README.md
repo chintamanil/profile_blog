@@ -4,7 +4,6 @@
 ## Description
 
 profile_blog is a simple blog and portfolio page application built with AngularJS, Node.js, less and MongoDB.
-Creates your article and shares them in a beautiful minimalistic template.
 
 ## Stack
 
@@ -23,18 +22,7 @@ Creates your article and shares them in a beautiful minimalistic template.
 - [x] Add Authentication to the administration
 - [x] Add registration for new user
 - [x] Handle Logout
-- [ ] Add users management
 - [x] Add Like to post
-- [ ] Add Comments to post
-- [ ] Add Like to comment
-
-## Features to Implement
-
-- [ ] Search indexing of redis data
-- [ ] Twitter feed
-- [ ] Project details
-- [ ] Secondary fixes to css
-
 
 ## Dependencies
 
@@ -42,7 +30,6 @@ You need `redis-2.8.9` up and running on port `6379`
 You need `mongodb-2.4.10` up and running on port `27017`
 
 ## Installation
-
 
 ```bash
 profile_blog$ sudo mongod
@@ -98,6 +85,16 @@ You can now open your browser: `http://localhost/profile_blog/app`
 Create a first account on `http://localhost/profile_blog/app/#/admin/register`
 
 To access the Administration, go to `http://localhost/profile_blog/app/#/admin/login`
+
+## Features to Implement
+
+- [ ] Search indexing of redis data
+- [ ] Twitter feed
+- [ ] Project details
+- [ ] Secondary fixes to css
+- [ ] Add Comments to post
+- [ ] Add Like to comment
+- [ ] Add users management
 
 ## Licence
 The MIT License (MIT)
