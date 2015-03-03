@@ -3,7 +3,8 @@
 
 ## Description
 
-profile_blog is a simple blog application built with AngularJS, Node.js and MongoDB. Creates your article and shares them in a beautiful minimalistic template.
+profile_blog is a simple blog application built with AngularJS, Node.js, less and MongoDB.
+Creates your article and shares them in a beautiful minimalistic template.
 
 
 ## Features
@@ -19,6 +20,13 @@ profile_blog is a simple blog application built with AngularJS, Node.js and Mong
 - [x] Add Like to post
 - [ ] Add Comments to post
 - [ ] Add Like to comment
+
+## Features to Implement
+
+- [ ] Search indexing of redis data
+- [ ] Twitter feed
+- [ ] Project details
+- [ ] Secondary fixes to css
 
 
 ## Dependencies
@@ -74,7 +82,7 @@ Edit api/blog.js and replace the value of Access-Control-Allow-Origin to match y
 Run the application:
 `profile_blog/api$ node blog.js`
 `profile_blog/api$ npm install -g local-web-server`
-`profile_blog/api$ ws`
+`profile_blog/app$ ws`
 
 ## Run
 
