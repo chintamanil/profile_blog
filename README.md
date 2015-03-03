@@ -3,9 +3,16 @@
 
 ## Description
 
-profile_blog is a simple blog application built with AngularJS, Node.js, less and MongoDB.
+profile_blog is a simple blog and portfolio page application built with AngularJS, Node.js, less and MongoDB.
 Creates your article and shares them in a beautiful minimalistic template.
 
+## Stack
+
+* AngularJS
+* Bootstrap
+* MongoDB
+* Redis
+* Node.js
 
 ## Features
 
@@ -91,14 +98,6 @@ You can now open your browser: `http://localhost/profile_blog/app`
 Create a first account on `http://localhost/profile_blog/app/#/admin/register`
 
 To access the Administration, go to `http://localhost/profile_blog/app/#/admin/login`
-
-## Stack
-
-* AngularJS
-* Bootstrap
-* MongoDB
-* Redis
-* Node.js
 
 ## Licence
 The MIT License (MIT)
