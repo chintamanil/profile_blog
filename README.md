@@ -5,11 +5,6 @@
 
 profile_blog is a simple blog application built with AngularJS, Node.js and MongoDB. Creates your article and shares them in a beautiful minimalistic template.
 
-## Article & Demo
-
-Article: http://www.kdelemme.com/2014/03/09/authentication-with-angularjs-and-a-node-js-rest-api/
-
-Demo: http://projects.kdelemme.com/blog/app/#/
 
 ## Features
 
@@ -29,18 +24,14 @@ Demo: http://projects.kdelemme.com/blog/app/#/
 ## Dependencies
 
 You need `redis-2.8.9` up and running on port `6379`
-
 You need `mongodb-2.4.10` up and running on port `27017`
 
 ## Installation
 
-Clone the repository with: `kevin@home:/$ git clone https://github.com/kdelemme/profile_blog.git`
 
-### Start Redis
-
-Start your redis instance:
 ```bash
-kevin@home:/var/www/angular/profile_blog$ redis-server
+profile_blog$ sudo mongod
+profile_blog$ redis-server
                 _._
            _.-``__ ''-._
       _.-``    `.  `_.  ''-._           Redis 2.8.9 (00000000/0) 64 bit
@@ -65,21 +56,25 @@ kevin@home:/var/www/angular/profile_blog$ redis-server
 
 ### Build angularjs app
 
-The build result is already available, but if you want to build it yourself, install gulp and the dependencies, then run it.
 
-install gulp and the gulp dependencies: `kevin@home:/profile_blog$ npm install`
+install gulp and the gulp dependencies:
 
+`profile_blog$ npm install`
 Edit app/js/app.js and replace the value of `options.api.base_url` to match your server configuration.
 
-Run gulp to build the scripts of the AngularJS app with: `kevin@home:/profile_blog$ gulp`
+Run gulp to build the scripts of the AngularJS app with:
+`profile_blog$ gulp`
 
 ### Install Nodejs App
 
-Go to the api folder and install the dependencies: `kevin@home:/profile_blog/api$ npm install`
+Go to the api folder and install the dependencies: `profile_blog/api$ npm install`
 
 Edit api/blog.js and replace the value of Access-Control-Allow-Origin to match your server configuration.
 
-Run the application: `kevin@home:/profile_blog/api$ node blog.js`
+Run the application:
+`profile_blog/api$ node blog.js`
+`profile_blog/api$ npm install -g local-web-server`
+`profile_blog/api$ ws`
 
 ## Run
 
@@ -100,7 +95,7 @@ To access the Administration, go to `http://localhost/profile_blog/app/#/admin/l
 ## Licence
 The MIT License (MIT)
 
-Copyright (c) 2014 Kevin Delemme (kdelemme@gmail.com)
+Copyright (c) 2014 Chintamani Lonkar (chintamani.lonkar@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -121,5 +116,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kdelemme/profile_blog/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
