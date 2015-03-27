@@ -34,31 +34,8 @@ You need `mongodb-2.4.10` up and running on port `27017`
 ```bash
 profile_blog$ sudo mongod
 profile_blog$ redis-server
-                _._
-           _.-``__ ''-._
-      _.-``    `.  `_.  ''-._           Redis 2.8.9 (00000000/0) 64 bit
-  .-`` .-```.  ```\/    _.,_ ''-._
- (    '      ,       .-`  | `,    )     Running in stand alone mode
- |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
- |    `-._   `._    /     _.-'    |     PID: 13499
-  `-._    `-._  `-./  _.-'    _.-'
- |`-._`-._    `-.__.-'    _.-'_.-'|
- |    `-._`-._        _.-'_.-'    |           http://redis.io
-  `-._    `-._`-.__.-'_.-'    _.-'
- |`-._`-._    `-.__.-'    _.-'_.-'|
- |    `-._`-._        _.-'_.-'    |
-  `-._    `-._`-.__.-'_.-'    _.-'
-      `-._    `-.__.-'    _.-'
-          `-._        _.-'
-              `-.__.-'
-
-[13499] 12 May 19:22:41.172 # Server started, Redis version 2.8.9
-[13499] 12 May 19:22:41.172 * The server is now ready to accept connections on port 6379
-```
 
 ### Build angularjs app
-
-
 install gulp and the gulp dependencies:
 
 `profile_blog$ npm install`
@@ -68,7 +45,6 @@ Run gulp to build the scripts of the AngularJS app with:
 `profile_blog$ gulp`
 
 ### Install Nodejs App
-
 Go to the api folder and install the dependencies: `profile_blog/api$ npm install`
 
 Edit api/blog.js and replace the value of Access-Control-Allow-Origin to match your server configuration.
@@ -79,7 +55,6 @@ Run the application:
 `profile_blog/app$ ws`
 
 ## Run
-
 You can now open your browser: `http://localhost/profile_blog/app`
 
 Create a first account on `http://localhost/profile_blog/app/#/admin/register`
