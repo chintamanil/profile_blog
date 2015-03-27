@@ -34,18 +34,21 @@ You need `mongodb-2.4.10` up and running on port `27017`
 ```bash
 profile_blog$ sudo mongod
 profile_blog$ redis-server
-
+```
 ### Build angularjs app
 install gulp and the gulp dependencies:
-
+```
 `profile_blog$ npm install`
 Edit app/js/app.js and replace the value of `options.api.base_url` to match your server configuration.
 
 Run gulp to build the scripts of the AngularJS app with:
 `profile_blog$ gulp`
-
+```
 ### Install Nodejs App
-Go to the api folder and install the dependencies: `profile_blog/api$ npm install`
+Go to the api folder and install the dependencies:
+
+```
+`profile_blog/api$ npm install`
 
 Edit api/blog.js and replace the value of Access-Control-Allow-Origin to match your server configuration.
 
@@ -53,14 +56,15 @@ Run the application:
 `profile_blog/api$ node blog.js`
 `profile_blog/api$ npm install -g local-web-server`
 `profile_blog/app$ ws`
-
+```
 ## Run
+```
 You can now open your browser: `http://localhost/profile_blog/app`
 
 Create a first account on `http://localhost/profile_blog/app/#/admin/register`
 
 To access the Administration, go to `http://localhost/profile_blog/app/#/admin/login`
-
+```
 ## Features to Implement
 
 - [ ] Search indexing of redis data
