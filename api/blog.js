@@ -64,5 +64,3 @@ app.delete('/post/:id', jwt({secret: secret.secretToken}), tokenManager.verifyTo
 
 //Serve the rss feed
 app.get('/rss', routes.rss.index);
-
-console.log('Blog API is starting on port 3001');

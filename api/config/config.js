@@ -4,11 +4,11 @@ config.blogName = 'myBlog';
 config.url = 'http://localhost:8000';
 
 config.rss = {
-  title:        'My RSS Feed',
+  title:        'My Feed',
   description:  'LoremIpsum',
-  link:         'http://mySite.fr',
-  image:        'http://mySite.fr/logo.png',
-  copyright:     'Copyright © 2013 John Doe. All rights reserved'
+  link:         'http://mySite.com',
+  image:        'http://mySite.com/logo.png',
+  copyright:     'Copyright © 2015. All rights reserved'
 };
 
 module.exports = config;

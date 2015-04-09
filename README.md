@@ -4,6 +4,7 @@
 ## Description
 
 profile_blog is a simple blog and portfolio page application built with AngularJS, Node.js, less and MongoDB.
+Based on a blog i read about creating M.E.A.N app for blog
 
 ## Stack
 
@@ -75,7 +76,7 @@ To access the Administration, go to `http://localhost/profile_blog/app/#/admin/l
 - [ ] Add Like to comment
 - [ ] Add users management
 
-## Licence
+## License
 The MIT License (MIT)
 
 Copyright (c) 2014 Chintamani Lonkar (chintamani.lonkar@gmail.com)
