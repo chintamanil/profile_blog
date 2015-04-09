@@ -5,6 +5,8 @@
 
 profile_blog is a simple blog and portfolio page application built with AngularJS, Node.js, less and MongoDB.
 Based on a blog i read about creating M.E.A.N app for blog
+https://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application
+http://travistidwell.com/blog/2015/01/20/how-to-build-a-mean-web-application/
 
 ## Stack
 
